@@ -14,29 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button mediaStreamer = (Button) findViewById(R.id.media_streamer);
-        Button superDuo1 = (Button) findViewById(R.id.super_duo1);
-        Button superDuo2 = (Button) findViewById(R.id.super_duo2);
-        Button antTerminator = (Button) findViewById(R.id.ant_terminator);
-        Button materialize = (Button) findViewById(R.id.materialize);
-        Button capstone = (Button) findViewById(R.id.capstone);
-
-        setPopupMessage(mediaStreamer, "spotify streamer");
-        setPopupMessage(superDuo1, "scores app");
-        setPopupMessage(superDuo2, "library app");
-        setPopupMessage(antTerminator, "build it bigger");
-        setPopupMessage(materialize, "xyz reader");
-        setPopupMessage(capstone, "my capstone app");
     }
 
-    private void setPopupMessage(Button btn, final String appName) {
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will launch " + appName + "!", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void showMessage(View v) {
+        Toast.makeText(getApplicationContext(), "This button will launch " + ((Button)v).getText() + "!", Toast.LENGTH_SHORT).show();
     }
 
     @Override

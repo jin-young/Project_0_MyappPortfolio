@@ -5,4 +5,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="OrangeButton" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#F08C35</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
 </resources>
